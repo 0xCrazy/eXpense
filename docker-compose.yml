@@ -1,0 +1,15 @@
+services:
+  auth_gateway:
+    build: ./authenticationservices
+    ports:
+      - "5005:8082"
+
+  employee_services:
+    build: ./employeeservices
+    ports:
+      - "5006:8081"
+
+  finance_services:
+    build: ./financeservices
+    ports:
+      - "5007:8083"

@@ -1,0 +1,12 @@
+services:
+  auth-service:
+    container_name: authentication-services
+    networks:
+      - app_network
+  employee-service:
+    container_name: employee-services
+    networks:
+      - app_network
+networks:
+  app_network:
+    driver: bridge
